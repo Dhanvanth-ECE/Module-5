@@ -31,6 +31,51 @@ To write a Python program that uses **Hierarchical Inheritance** to input and di
 5. Display collected information using class methods.
 
 ## Program
-Add code here
+```p
+class Details:
+    def getName(self, name):
+        self.name = name
+
+    def getAge(self, age):
+        self.age = age
+
+
+class Employee(Details):
+    def getEmployeeDetails(self, emp_id, department):
+        self.emp_id = emp_id
+        self.department = department
+
+        print("Employee Details")
+        print("Name:", self.name)
+        print("Age:", self.age)
+        print("Employee ID:", self.emp_id)
+        print("Department:", self.department)
+
+
+class Patient(Details):
+    def getPatientDetails(self, patient_id, disease):
+        self.patient_id = patient_id
+        self.disease = disease
+
+        print("\nPatient Details")
+        print("Name:", self.name)
+        print("Age:", self.age)
+        print("Patient ID:", self.patient_id)
+        print("Disease:", self.disease)
+
+
+emp = Employee()
+emp.getName(input("Enter Employee Name: "))
+emp.getAge(int(input("Enter Employee Age: ")))
+emp.getEmployeeDetails(input("Enter Employee ID: "),
+                       input("Enter Department: "))
+
+pat = Patient()
+pat.getName(input("\nEnter Patient Name: "))
+pat.getAge(int(input("Enter Patient Age: ")))
+pat.getPatientDetails(input("Enter Patient ID: "),
+                      input("Enter Disease: "))
+```
 ## Sample Output
+<img width="404" height="626" alt="image" src="https://github.com/user-attachments/assets/64ed1862-ae87-4179-b3aa-255ba43bc65a" />
 
